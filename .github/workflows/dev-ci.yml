@@ -35,6 +35,9 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           base: main
-          branch: dev
+          head: dev
           title: "Auto PR from Dev to Main"
           body: "This PR was created automatically after sucessful CI"
+          branch: auto-pr-dev # Optional: name for the PR branch
+          labels: "automated"
+          draft: false
