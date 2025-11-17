@@ -35,5 +35,5 @@ jobs:
           organization: DevSecOps
           projectName: My Node Project
         env:
-          SOONAR_TOKEN: ${{ secrets.Sonar_Token}}
+          SOONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
 
