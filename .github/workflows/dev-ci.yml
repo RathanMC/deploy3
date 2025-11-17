@@ -1,7 +1,7 @@
 name: BUILD
 on:
   push:
-    branches: ["dev"]
+    branches: [dev, main]
   pull_request:
      types: [opened, synchronized, reopened]
 
