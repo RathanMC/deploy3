@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Jest tests
         run: |
-          nmp test
+          npm test
 
       - name: SonrQube Scan
         uses: sonarsource/sonarcloud-github-action@master
