@@ -26,7 +26,7 @@ jobs:
           nmp test
 
       - name: SonrQube Scan
-        uses: sonarsource/sonarcloud-github-action@v1.11.0
+        uses: sonarsource/sonarcloud-github-action@master
         with:
           projectKey: my-node-project
           organization: DevSecOps
