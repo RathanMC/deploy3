@@ -24,9 +24,9 @@ jobs:
       - name: Fix Jest permissions
         run: chmod +x node_modules/.bin/jest
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: |
-          npm test
+          npm test -- --coverage
 
       - name: SonrQube Scan
         uses: sonarsource/sonarcloud-github-action@v5.0.0
@@ -34,7 +34,7 @@ jobs:
           args: >
             -Dsonar.projectkey=RathanMC_deploy3
             -Dsonar.organization=rathanmc
-            -Dsonar.projetName="Deploy3"
+            -Dsonar.projectName="Deploy3"
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
