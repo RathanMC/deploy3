@@ -1,15 +1,19 @@
 {
   "name": "github-actions-demo",
   "version": "1.0.0",
+  "description": "Demo project for GitHub Actions CI/CD with SonarQube",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "sonar": "sonar-scanner"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["github-actions", "ci", "sonarqube", "jest"],
+  "author": "Your Name",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "jest": "^30.2.0"
+  },
+  "dependencies": {
+    "sonarqube-scanner": "^3.1.0"
   }
 }
