@@ -4,14 +4,17 @@
   "description": "Demo project for GitHub Actions CI/CD with SonarQube",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "sonar": "sonar-scanner"
   },
   "keywords": ["github-actions", "ci", "sonarqube", "jest"],
   "author": "Your Name",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^30.2.0"
+    "jest": "^30.2.0",
+    "eslint": "^8.0.0"
   },
   "dependencies": {
     "sonarqube-scanner": "^3.1.0"
