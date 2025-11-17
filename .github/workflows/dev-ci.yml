@@ -21,16 +21,19 @@ jobs:
         run: |
           npm install
 
-      - name: Run Jest tests
+      - name: Fix Jest permissions
+        run: chmod +x node_modules/.bin/jest
+
+      - name: Run tests
         run: |
-          nmp test
+          npm test
 
       - name: SonrQube Scan
-        uses: sonarsource/sonarcloud-github-action@v1.11.0
+        uses: sonarsource/sonarcloud-github-action@master
         with:
           projectKey: my-node-project
           organization: DevSecOps
           projectName: My Node Project
         env:
-          SOONAR_TOKEN: ${{ secrets.Sonar_Token}}
+          SOONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
 
