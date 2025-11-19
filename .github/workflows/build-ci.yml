@@ -6,8 +6,8 @@ on:
      types: [opened, synchronized, reopened]
 
 jobs:
-  sonarqube:
-    name: SonarQube
+  Build:
+    name: Build App
     runs-on: windows-latest
 
     steps:
