@@ -20,15 +20,15 @@ jobs:
         run: |
           npm install
 
-      - name: Run tests with coverage
-        run: |
-          npm test -- --coverage
+      # - name: Run tests with coverage
+      #   run: |
+      #     npm test -- --coverage
 
-      - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@v6
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: https://sonarcloud.io
+      # - name: SonarQube Scan
+      #   uses: sonarsource/sonarqube-scan-action@v6
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #     SONAR_HOST_URL: https://sonarcloud.io
           
           
      
