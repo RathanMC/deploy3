@@ -6,7 +6,7 @@ on:
      types: [opened, synchronized, reopened]
 
 jobs:
-  Build:
+  CI:
     name: Build App
     runs-on: windows-latest
 
@@ -20,20 +20,20 @@ jobs:
         run: |
           npm install
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-output
-          path: node_modules/bin/**
+      # - name: Upload build artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: build-output
+      #     path: node_modules/bin/**
 
-      # - name: Run tests with coverage
-      #   run: |
-      #     npm test -- --coverage
+      - name: Run tests with coverage
+        run: |
+          npm test -- --coverage
 
-      # - name: SonarQube Scan
-      #   uses: sonarsource/sonarqube-scan-action@v6
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@v6
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       #     SONAR_HOST_URL: https://sonarcloud.io
           
           
